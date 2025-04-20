@@ -46,3 +46,18 @@ quiz.forEach((q, index) => {
         </div>
     `;
 });
+
+// Calculate and display quiz result based on user answers
+function submitQuiz() {
+    let score = 0;
+
+    quiz.forEach((q, index) => {
+        const selected = document.querySelector(`input[name="q${index}"]:checked`);
+        if (selected && parseInt(selected.value) === q.answer) {
+            score++;
+        }
+    });
+
+    document.getElementById("result").innerHTML = `<h1>You scored ${score} out of ${quiz.length}</h1>`;
+}
+
