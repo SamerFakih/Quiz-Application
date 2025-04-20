@@ -12,3 +12,49 @@
     justify-content: center;
     align-items: center;
 }
+/* Style the register section container */
+.register {
+    background-color: #f0f0f0;
+    padding: 100px;
+    text-align: center;
+    flex-direction: column;
+    border: #333 2px solid;
+}
+/* Style heading inside register section */
+.register h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+/* Style input fields in register form */
+.register input {
+    padding: 10px;
+    font-size: 1.2em;
+    background-color: rgb(234, 146, 15);
+    margin: 20px;
+    width: 300px;
+    border: black 2px solid;
+    border-radius: 10px;
+}
+/* Style paragraph text in register section */
+.register p {
+    font-size: 1.2em;
+    margin: 5px;
+}
+/* Set button size and hover effect */
+.register .regbtn {
+    width: 100px;
+}
+.register .regbtn:hover {
+    background-color: rgb(238, 178, 89);
+}
+/* Style register link and hover effect */
+.register p a {
+    color: #333;
+    text-decoration: none;
+}
+.register p a:hover {
+    text-decoration: underline;
+}
+.reg p {
+    width: 100px;
+}
