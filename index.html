@@ -1,0 +1,41 @@
+<!-- created index.html file -->
+<!DOCTYPE html>
+<html lang="en">
+<!-- added head requirments -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <link href="./styles/base.css" rel="stylesheet">
+</head>
+<body>
+    <!-- added navbar contain logo and name -->
+    <div class="navbar flex">
+        <img src=".\image\quiz_3407038.png" alt="Logo" style="width: 100px; height: auto;">
+        <h1>Quiz Application</h1>
+    </div>
+    <!-- added box for welcoming and login button -->
+    <div class="welcontainer flex">
+        <img src="./image/smartphone_3687295.png">
+        <div class="welcome">
+            <h1>Welcome to the Quiz Application</h1>
+            <input class="logbtn" type="button" value="login" id="welcomeloginbtn">
+        </div>
+    </div>
+    <!-- added login form -->
+    <div class="login flex" id ="loginForm">
+        <h1>Login</h1>
+        <div class=" log flex">
+            <p>Email:</p>
+            <input type="text" id="logEmail" placeholder="example@gmail.com">
+        </div>
+        <div class=" log flex">
+            <p>Password:</p>
+            <input type="password" id="logPassword" placeholder="********">
+        </div>
+        <input class="logbtn" id="button" type="submit" value="login">
+        <p>Don't have an account?<a href="register.html">Register</a></p>
+    </div>
+    <!-- connected my html file to logic.js -->
+<script src="./scripts/logic.js"></script>
+</body>
