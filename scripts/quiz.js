@@ -17,3 +17,7 @@ const jsquiz = [
     { question: "Which event occurs when the user clicks on an HTML element?", option1: "onclick", option2: "onmouseover", option3: "onchange", answer: 1 }
 ];
 
+// Get quiz ID from URL query string
+const urlParams = new URLSearchParams(window.location.search);
+const quizId = urlParams.get('id');
+
