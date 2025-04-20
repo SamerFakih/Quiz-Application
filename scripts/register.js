@@ -23,6 +23,9 @@ function registerUser() {
     users.push({ email, password });
     localStorage.setItem("users", JSON.stringify(users));
 
+    // Notify user of successful registration and redirect to login page
+    alert("Registration successful! Redirecting to login...");
+    location.href = "../index.html";
 }
 
 
