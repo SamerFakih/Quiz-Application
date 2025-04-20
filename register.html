@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <link href="./styles/register.css" rel="stylesheet">
+</head>
+<body>
+    <div class="register flex" id ="register">
+        <h1>Register</h1>
+        <div class=" reg flex">
+            <p>first name:</p>
+            <input type="text" id="first_name">
+        </div>
+        <div class=" reg flex">
+            <p>last name:</p>
+            <input type="text" id="last_name">
+        </div>
+        <div class=" reg flex">
+            <p>email:</p>
+            <input type="text" id="email" placeholder="example@gmail.com">
+        </div>
+        <div class=" reg flex">
+            <p>password:</p>
+            <input type="password" id="password" placeholder="********">
+        </div>
+        <input class="regbtn" type="button" value="register" onclick="registerUser()">
+    </div>
+    <script src="./scripts/register.js"></script>
+</body>
+</html>
