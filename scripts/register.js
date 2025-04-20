@@ -9,6 +9,9 @@ function registerUser() {
         return;
     }
 
+    // Get current list of users from localStorage or initialize an empty array
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+
 }
 
 
