@@ -12,6 +12,13 @@ function registerUser() {
     // Get current list of users from localStorage or initialize an empty array
     const users = JSON.parse(localStorage.getItem("users")) || [];
 
+    // Prevent duplicate registrations by checking if email is already used
+    const userExists = users.some(user => user.email === email);
+    if (userExists) {
+        alert("This email is already registered.");
+        return;
+    }
+
 }
 
 
