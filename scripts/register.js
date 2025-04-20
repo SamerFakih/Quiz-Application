@@ -19,6 +19,10 @@ function registerUser() {
         return;
     }
 
+    // Save new user to localStorage
+    users.push({ email, password });
+    localStorage.setItem("users", JSON.stringify(users));
+
 }
 
 
