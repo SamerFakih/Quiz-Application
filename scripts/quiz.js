@@ -32,3 +32,17 @@ if (quizId === "html") {
 } else {
     console.error("Invalid quiz ID");
 }
+
+// Dynamically render quiz questions to the page
+const container = document.getElementById("quizContainer");
+
+quiz.forEach((q, index) => {
+    container.innerHTML += `
+        <div class="question-block">
+            <p>${index + 1}. ${q.question}</p>
+            <label><input type="radio" name="q${index}" value="1"> ${q.option1}</label><br/>
+            <label><input type="radio" name="q${index}" value="2"> ${q.option2}</label><br/>
+            <label><input type="radio" name="q${index}" value="3"> ${q.option3}</label><br/>
+        </div>
+    `;
+});
