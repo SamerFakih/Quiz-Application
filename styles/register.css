@@ -1,0 +1,14 @@
+/* Apply global reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+/* Define flex utility class */
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
