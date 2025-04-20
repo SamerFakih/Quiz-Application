@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.container {
+    flex-direction: column;
+    background-image: url(../image/freepik__adjust__45572.png);
+}
+.container img{
+    width: 500px;
+    height: 250px;
+}
+.container h3{
+    font-size: 2em;
+    text-align: center;
+    padding: 20px;
+}
