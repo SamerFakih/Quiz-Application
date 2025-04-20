@@ -8,6 +8,13 @@ document.addEventListener("DOMContentLoaded", function () {
         loginbtn.addEventListener("click", checkLogin)
     }
 });
+// Implement smooth scroll behavior on welcome button click
+function goToResult() {
+    console.log("Welcome Login button clicked");
+    document.getElementById("loginForm").scrollIntoView({ behavior: "smooth" });
+}
+
+
 
 
 
