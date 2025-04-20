@@ -21,3 +21,14 @@ const jsquiz = [
 const urlParams = new URLSearchParams(window.location.search);
 const quizId = urlParams.get('id');
 
+// Select quiz based on ID from URL
+let quiz = [];
+if (quizId === "html") {
+    quiz = htmlquiz;
+} else if (quizId === "CSS") {
+    quiz = cssquiz;
+} else if (quizId === "JS") {
+    quiz = jsquiz;
+} else {
+    console.error("Invalid quiz ID");
+}
