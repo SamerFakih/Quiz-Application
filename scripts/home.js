@@ -21,5 +21,14 @@ for (let i = 0; i < quizTitle.length; i++) {
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("card").innerHTML = content;
 
+    // Add event listeners to start quiz buttons
+    const quizButtons = document.querySelectorAll(".start-quiz");
+    quizButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            // Redirect to quiz page with quiz ID in URL
+            const quizId = button.id;
+            window.location.href = `../quiz.html?id=${quizId}`;
+        });
+    });
 });
 
