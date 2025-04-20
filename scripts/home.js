@@ -16,3 +16,10 @@ for (let i = 0; i < quizTitle.length; i++) {
         </div>
     `;
 }
+
+// Insert quiz items into the DOM after page loads
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("card").innerHTML = content;
+
+});
+
