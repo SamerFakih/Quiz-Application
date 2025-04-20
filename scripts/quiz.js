@@ -61,3 +61,7 @@ function submitQuiz() {
     document.getElementById("result").innerHTML = `<h1>You scored ${score} out of ${quiz.length}</h1>`;
 }
 
+// Attach submit button event after DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("submit").addEventListener("click", submitQuiz);
+});
