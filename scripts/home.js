@@ -5,3 +5,14 @@ const quizTitle = [
     { title: "JavaScript", id: "JS", image: "../image/javascript_10809622.png" }
 ];
 
+// Build dynamic HTML content for each quiz item
+let content = "";
+for (let i = 0; i < quizTitle.length; i++) {
+    content += `
+        <div class="quiz-item flex">
+            <h2>${quizTitle[i].title}</h2>
+            <img src=${quizTitle[i].image} alt="${quizTitle[i].title}" />
+            <button class="start-quiz" id="${quizTitle[i].id}">Start Quiz</button>
+        </div>
+    `;
+}
