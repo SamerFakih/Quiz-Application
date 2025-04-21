@@ -1,8 +1,13 @@
+const email = sessionStorage.getItem("email");
+if (!email) {
+    alert("Please log in to access this page.");
+    window.location.href = "../index.html";
+}
 // Define quiz data array with title, ID, and image path
 const quizTitle = [
     { title: "HTML", id: "html", image: "../image/html-file_2786969.png" },
-    { title: "CSS", id: "CSS", image: "../image/css-document_8322479.png" },
-    { title: "JavaScript", id: "JS", image: "../image/javascript_10809622.png" }
+    { title: "CSS", id: "css", image: "../image/css-document_8322479.png" },
+    { title: "JavaScript", id: "js", image: "../image/javascript_10809622.png" }
 ];
 
 // Build dynamic HTML content for each quiz item

@@ -1,7 +1,9 @@
 function registerUser() {
     // Get and sanitize user input from registration form
+    const username = document.getElementById("username").value.trim();
     const email = document.getElementById("email").value.trim().toLowerCase();
     const password = document.getElementById("password").value;
+
 
     // Validate that both email and password fields are filled
     if (!email || !password) {
@@ -20,13 +22,19 @@ function registerUser() {
     }
 
     // Save new user to localStorage
-    users.push({ email, password });
+    users.push({ email, password, username,});
     localStorage.setItem("users", JSON.stringify(users));
 
     // Notify user of successful registration and redirect to login page
     alert("Registration successful! Redirecting to login...");
     location.href = "../index.html";
 }
+function clearLocalStorage() {
+    localStorage.clear();
+    alert("Local storage cleared!");
+}
+// Add event listener to the register button
+document.getElementById("clear").addEventListener("click", registerUser);
 
 
 

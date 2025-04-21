@@ -18,17 +18,24 @@ function checkLogin() {
     const emailInput = document.getElementById("logEmail").value.trim().toLowerCase();
     const passwordInput = document.getElementById("logPassword").value;
 
+       // First, check for admin login
+    if (emailInput === "adminn@quiz.com" && passwordInput === "admin1234") {
+        location.href = "../dashboard.html";
+    }
     const users = JSON.parse(localStorage.getItem("users")) || [];
 
     const validUser = users.find(user => user.email === emailInput && user.password === passwordInput);
 
     if (validUser) {
-        alert("Login successful!");
+        sessionStorage.setItem("email", emailInput);
         location.href = "../home.html";
-    } else {
+    }else {
         alert("Incorrect email or password.");
     }
 }
+// save email in session storage
+
+
 
 
 

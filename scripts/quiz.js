@@ -21,19 +21,20 @@ const jsquiz = [
 const urlParams = new URLSearchParams(window.location.search);
 const quizId = urlParams.get('id');
 
-// Select quiz based on ID from URL
+// Select quiz based on ID
 let quiz = [];
 if (quizId === "html") {
     quiz = htmlquiz;
-} else if (quizId === "CSS") {
+} else if (quizId === "css") {
     quiz = cssquiz;
-} else if (quizId === "JS") {
+} else if (quizId === "js") {
     quiz = jsquiz;
 } else {
     console.error("Invalid quiz ID");
 }
 
-// Dynamically render quiz questions to the page
+// Dynamically render quiz questions
+const users = JSON.parse(localStorage.getItem("users")) || [];
 const container = document.getElementById("quizContainer");
 
 quiz.forEach((q, index) => {
@@ -47,10 +48,11 @@ quiz.forEach((q, index) => {
     `;
 });
 
-// Calculate and display quiz result based on user answers
+// Handle quiz submission
 function submitQuiz() {
     let score = 0;
 
+    // Calculate score
     quiz.forEach((q, index) => {
         const selected = document.querySelector(`input[name="q${index}"]:checked`);
         if (selected && parseInt(selected.value) === q.answer) {
@@ -58,10 +60,31 @@ function submitQuiz() {
         }
     });
 
+    // Display result
     document.getElementById("result").innerHTML = `<h1>You scored ${score} out of ${quiz.length}</h1>`;
+
+    // Save score to user
+    const email = sessionStorage.getItem("email");
+    if (!email) {
+        alert("Please log in to save your score.");
+        return;
+    }
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+    
+    const updatedUsers = users.map(user => {
+        if (user.email === email) {
+            if (!user.scores) user.scores = {};
+            if (!user.scores[quizId]) user.scores[quizId] = [];
+            user.scores[quizId].push(score);
+        }
+        return user;
+        
+    });
+
+    localStorage.setItem("users", JSON.stringify(updatedUsers));
 }
 
-// Attach submit button event after DOM is fully loaded
+// Add event listener to submit button
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("submit").addEventListener("click", submitQuiz);
 });
