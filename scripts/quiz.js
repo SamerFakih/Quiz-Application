@@ -87,4 +87,11 @@ function submitQuiz() {
 // Add event listener to submit button
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("submit").addEventListener("click", submitQuiz);
+    document.getElementById("BackHome").addEventListener("click", function () {
+        window.location.href = "index.html";
+    });
+    document.getElementById("Back").addEventListener("click", function () {
+        window.location.href = "../home.html";
+    });
 });
+
