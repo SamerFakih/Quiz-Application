@@ -34,7 +34,7 @@ function clearLocalStorage() {
     alert("Local storage cleared!");
 }
 // Add event listener to the register button
-document.getElementById("clear").addEventListener("click", registerUser);
+document.getElementById("clear").addEventListener("click", clearLocalStorage);
 
 
 
