@@ -78,6 +78,10 @@
     background-color: rgb(245, 170, 56);
     color: white;
 }
+.logo{
+    width: 100px;
+    height: auto;
+}
 /* login form style */
 .login {
     background-color: #f0f0f0;
