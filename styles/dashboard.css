@@ -31,6 +31,7 @@
 .btn {
     padding: 20px;
     padding: 10px;
+    margin: 10px;
     font-size: 1.2em;
     background-color: rgb(234, 146, 15);
     border: black 2px solid;

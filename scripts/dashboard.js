@@ -27,3 +27,7 @@ function displayUsers() {
 }
 
 document.addEventListener("DOMContentLoaded", displayUsers);
+
+document.getElementById("home").addEventListener("click", function() {
+    window.location.href = "index.html";
+});
